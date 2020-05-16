@@ -14,6 +14,13 @@ metadata:
 {{- end }}
 spec:
   replicas: {{ .Values.replicas }}
+  strategy:
+    type: {{ .Values.updateStrategy }}
+    {{- if eq .Values.updateStrategy "RollingUpdate" }}
+    rollingUpdate:
+      maxSurge: {{ .Values.rollingUpdateMaxSurge }}
+      maxUnavailable: {{ .Values.rollingUpdateMaxUnavailable }}
+        {{- end }}  
   selector:
     matchLabels:
       app: {{ template "nats.name" . }}
@@ -33,12 +40,6 @@ spec:
 {{ toYaml . | indent 8 }}
 {{- end }}
     spec:
-      updateStrategy:
-        type: {{ .Values.updateStrategy }}
-        {{- if .Values.rollingUpdatePartition }}
-        rollingUpdate:
-          partition: {{ .Values.rollingUpdatePartition }}
-        {{- end }}
       {{- if .Values.rbacEnabled }}
       serviceAccountName: nats-streaming-operator
       {{- end }}
