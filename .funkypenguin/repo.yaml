@@ -1,4 +1,4 @@
-name: .penguin
+name: helm-nats-operator
 
 readme:
   template: chart
@@ -6,7 +6,9 @@ readme:
   sections:
     - title: What is this?
       body: |
-        This is a helm chart
+        This is a copy of the [official NATS Helm Chart](https://github.com/nats-io/nats-operator/tree/master/helm/nats-operator).
+
     - title: Why it exists?
       body: |
-        Details about the meaning of life go here :)
+        I'm publishing it here until the official chart has an official repo (PR pending). My CI system requires a helm chart
+        to be installed from a repo, rather than directly from the filesystem.
