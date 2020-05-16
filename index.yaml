@@ -1,0 +1,27 @@
+apiVersion: v1
+entries:
+  nats-streaming-operator:
+  - apiVersion: v1
+    appVersion: 0.2.3
+    created: "2020-05-16T02:55:26.165223799Z"
+    description: Operator for managing NATS Streaming clusters running on Kubernetes.
+    digest: f61f2903776188e15c6128be62b93ba54555010679e3070bde3e9c0170b15986
+    home: https://github.com/nats-io/nats-streaming-operator
+    icon: https://bitnami.com/assets/stacks/nats/img/nats-stack-110x117.png
+    keywords:
+    - nats
+    - streaming
+    - delivery
+    - ratelimit
+    - replay
+    - restart
+    maintainers:
+    - email: hans@starefossen.com
+      name: starefossen
+    name: nats-streaming-operator
+    sources:
+    - https://github.com/nats-io/nats-streaming-operator
+    urls:
+    - https://github.com/geek-cookbook/helm-nats-streaming-operator/releases/download/nats-streaming-operator-1.0.0/nats-streaming-operator-1.0.0.tgz
+    version: 1.0.0
+generated: "2020-05-16T02:55:26.071040934Z"
