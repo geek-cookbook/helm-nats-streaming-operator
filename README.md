@@ -32,8 +32,8 @@
 
 For one thing, it's known to be syntactically correct, thanks to the wonders of CI:
 
-![Linting](https://github.com/geek-cookbook/.penguin/workflows/Linting/badge.svg)
-![Testing](https://github.com/geek-cookbook/.penguin/workflows/Testing/badge.svg)
+![Linting](https://github.com/geek-cookbook/helm-nats-operator/workflows/Linting/badge.svg)
+![Testing](https://github.com/geek-cookbook/helm-nats-operator/workflows/Testing/badge.svg)
 
 
  
@@ -48,8 +48,8 @@ helm repo add geek-cookbook https://geek-cookbook.github.io/charts/
 Then simply install using helm, for example
 
 ```
-kubectl create namespace .penguin
-helm upgrade --install --namespace .penguin geek-cookbook/.penguin
+kubectl create namespace helm-nats-operator
+helm upgrade --install --namespace helm-nats-operator geek-cookbook/helm-nats-operator
 ```
 
 
@@ -57,10 +57,11 @@ helm upgrade --install --namespace .penguin geek-cookbook/.penguin
 
 # What is this?
 
-This is a helm chart
+This is a copy of the [official NATS Helm Chart](https://github.com/nats-io/nats-operator/tree/master/helm/nats-operator).
 
 # Why it exists?
 
-Details about the meaning of life go here :)
+I&#39;m publishing it here until the official chart has an official repo (PR pending). My CI system requires a helm chart
+to be installed from a repo, rather than directly from the filesystem.
 
 
